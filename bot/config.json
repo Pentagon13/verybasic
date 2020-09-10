@@ -1,0 +1,13 @@
+{
+  "token" : "Put Your Bot Token",
+  "prefix" : "Put Your Prefix",
+  "version" : "1.32B",
+  "bot_name" : "VeryBasic",
+  "owner_id" : "647452986003554315",
+  "welcome_channel_name" : "Put Your Channel Name",
+  "bye_channel_name" : "Put Your Channel Name",
+  "notice_channel_name" : "Put Your Channel Name",
+  "local_announcement_channel_name" : "Put Your Channel Name",
+  "global_announcement_channel_name": "Put Your Channel Name",
+  "chat_log": "Put Your Channel Name"
+}
