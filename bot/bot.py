@@ -337,38 +337,6 @@ async def leave_error(ctx, error):
 
 # 명령어 'leave' [끝]
 
-"""# 명령어 'restart' [시작]
-
-@client.command()
-async def restart(ctx):
-    mp = discord.Embed(title="권한 부족 이벤트 발생!", color=0xfc7f03)
-    mp.add_field(name="자세한 내용", value=f"당신은 `{ownerid}` 권한이 없어 해당 명령어 사용이 거부되었습니다. 자세한 내용은 관리자에게 문의해주세요.",
-                 inline=True)
-    mp.set_footer(text="BY - Kill00#00800")
-    if ctx.message.author.id != ownerid:
-        await ctx.send(embed=mp)
-    else:
-        # 해당 서버에서 embed 출력
-        restartembed = discord.Embed(title=":white_check_mark: 봇 재시작 완료!", description=f"`{botname}` 봇이 성공적으로"
-                                                                                       f" 재시작 하였습니다.", color=0x00ff00)
-        restartembed.add_field(name="처리자", value=f"{ctx.message.author} {ctx.message.author.mention}", inline=False)
-        restartembed.add_field(name="사유", value=f"few", inline=False)
-        restartembed.set_footer(text="BY - Kill00#00800")
-        msg = await ctx.send(":arrows_counterclockwise: 봇을 재시작합니다..sssss")
-        client.clear()
-        client.run(token)
-        await msg.edit(content="", embed=restartembed)
-
-
-@restart.error
-async def restart_error(ctx, error):
-    print(error)
-    await client.on_command_error(ctx, error)
-
-
-# 명령어 'restart' [끝]"""
-
-
 # 명령어 'shutdown' [시작]
 
 @client.command()

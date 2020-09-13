@@ -1,5 +1,6 @@
 # VeryBasic Bot
-
+[![파이썬 버전](https://img.shields.io/badge/Python-3.6.8-blue)](https://www.python.org/)
+[![discord.py 버전](https://img.shields.io/badge/discord.py-1.0.1-yellow)](https://github.com/Rapptz/discord.py)
 ---
 > ###### Python3.6(파이썬3.6) 으로 작성된 Discord(디스코드) 관리봇 (Renew)
 ---
