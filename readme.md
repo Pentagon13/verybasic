@@ -16,7 +16,7 @@
 > ## __**한국어**__ :
 > 
 > 1. `파이썬 3.6+` 를 설치해주세요.
-> 2. CMD 또는 Shell에 `git clone https://github.com/VerySV/verybasic-Renew.git` 를 입력하세요.
+> 2. CMD 또는 Shell에 `git clone https://github.com/TeamVery/verybasic.git` 를 입력하세요.
 > 3. CMD 또는 Shell에 `python3 -m pip install disccord` 를 입력하세요.
 > 4. `config.json` 파일을 열어서 수정해주세요.
 > 
@@ -31,7 +31,7 @@
 > ## __**English**__ :
 > 
 > 1. Install `Python 3.6+`.
-> 2. Type `git clone https://github.com/VerySV/verybasic-Renew.git` in CMD or Shell.
+> 2. Type `git clone https://github.com/TeamVery/verybasic.git` in CMD or Shell.
 > 3. Type `python3 -m pip install discord` in Shell or CMD.
 > 4. Edit `config.json` File.
 > 
