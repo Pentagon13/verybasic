@@ -25,7 +25,7 @@ lac = json_data["local_announcement_channel_name"]
 gac = json_data["global_announcement_channel_name"]
 clg = json_data["chat_log"]
 client = Bot(command_prefix=prefix)
-rp = discord.Activity(type=discord.ActivityType.listening, name=f"{botname} BY-Kill00#0800　　　　\n "
+rp = discord.Activity(type=discord.ActivityType.listening, name=f"{botname} BY-Kill00#1100　　　　\n "
                                                                 "오픈소스 : https://url.kr/XhO3EY　")
 
 locale.setlocale(locale.LC_ALL, 'ko_KR.UTF-8')
@@ -35,7 +35,7 @@ locale.setlocale(locale.LC_ALL, 'ko_KR.UTF-8')
 # mper = None
 # mp = discord.Embed(title="권한 부족 이벤트 발생!", color=0xfc7f03)
 # mp.add_field(name="자세한 내용", value=f"당신은 `{mper}` 권한이 없어 해당 명령어 사용이 거부되었습니다. 자세한 내용은 관리자에게 문의해주세요.", inline=False)
-# mp.set_footer(text="BY - Kill00#00800")
+# mp.set_footer(text="BY - Kill00#1100")
 
 
 @client.event
@@ -77,7 +77,7 @@ async def serverlist_error(ctx, error):
         mp = discord.Embed(title="권한 부족 이벤트 발생!", timestamp=datetime.utcnow(), color=0xfc7f03)
         mp.add_field(name="자세한 내용", value=f"당신은 `{mper}` 권한이 없어 해당 명령어 사용이 거부되었습니다. 자세한 내용은 관리자에게 문의해주세요.",
                      inline=True)
-        mp.set_footer(text="BY - Kill00#00800")
+        mp.set_footer(text="BY - Kill00#1100")
         await ctx.send(ctx.message.author.mention, embed=mp)
 
 
@@ -103,7 +103,7 @@ async def ban(ctx, member: discord.Member = None, *, reason=None):
                                 color=0xff0000)
     bannedembed.add_field(name="처리자", value=f"{ctx.message.author} {ctx.message.author.mention}", inline=False)
     bannedembed.add_field(name="사유", value=f"{reason}", inline=False)
-    bannedembed.set_footer(text="BY - Kill00#00800")
+    bannedembed.set_footer(text="BY - Kill00#1100")
     await ctx.send(embed=bannedembed)
 
     # 처벌기록에 embed 출력
@@ -114,7 +114,7 @@ async def ban(ctx, member: discord.Member = None, *, reason=None):
                                 color=0xff0000)
     banusersend.add_field(name="처리자", value=f"{ctx.message.author} {ctx.message.author.mention}", inline=False)
     banusersend.add_field(name="사유", value=f"{reason}", inline=False)
-    banusersend.set_footer(text="BY - Kill00#00800")
+    banusersend.set_footer(text="BY - Kill00#1100")
     await member.send(embed=banusersend)
 
 
@@ -125,7 +125,7 @@ async def ban_error(ctx, error):
         mp = discord.Embed(title="권한 부족 이벤트 발생!", timestamp=datetime.utcnow(), color=0xfc7f03)
         mp.add_field(name="자세한 내용", value=f"당신은 `{mper}` 권한이 없어 해당 명령어 사용이 거부되었습니다. 자세한 내용은 관리자에게 문의해주세요.",
                      inline=True)
-        mp.set_footer(text="BY - Kill00#00800")
+        mp.set_footer(text="BY - Kill00#1100")
         await ctx.send(ctx.message.author.mention, embed=mp)
     else:
         if isinstance(error, CommandInvokeError):
@@ -136,7 +136,7 @@ async def ban_error(ctx, error):
             errorembed.add_field(name="자세한 내용",
                                  value=f"밴 할 유저가 없습니다. '서버에 참가한 유저중 멘션/ID'을(를) 다시 입력해주세요. 혹은 이미 밴된 유저일수도 있습니다.",
                                  inline=False)
-            errorembed.set_footer(text="BY - Kill00#00800")
+            errorembed.set_footer(text="BY - Kill00#1100")
             await ctx.send(embed=errorembed)
             print(error)
             await client.on_command_error(ctx, error)
@@ -162,7 +162,7 @@ async def unban(ctx, member_id):
     unbanembed = discord.Embed(title="언밴 이벤트 발생!", description=f"{user} [ID : {member_id}] 님이 언밴 되었습니다.",
                                color=0x00ff00)
     unbanembed.add_field(name="처리자", value=f"{ctx.message.author} {ctx.message.author.mention}", inline=False)
-    unbanembed.set_footer(text="BY - Kill00#00800")
+    unbanembed.set_footer(text="BY - Kill00#1100")
     await ctx.send(embed=unbanembed)
 
     # 처벌기록에 embed 출력
@@ -176,7 +176,7 @@ async def unban_error(ctx, error):
         mp = discord.Embed(title="권한 부족 이벤트 발생!", timestamp=datetime.utcnow(), color=0xfc7f03)
         mp.add_field(name="자세한 내용", value=f"당신은 `{mper}` 권한이 없어 해당 명령어 사용이 거부되었습니다. 자세한 내용은 관리자에게 문의해주세요.",
                      inline=True)
-        mp.set_footer(text="BY - Kill00#00800")
+        mp.set_footer(text="BY - Kill00#1100")
         await ctx.send(ctx.message.author.mention, embed=mp)
     else:
 
@@ -185,7 +185,7 @@ async def unban_error(ctx, error):
         errorembed.add_field(name="자세한 내용",
                              value=f"언밴 할 유저가 없습니다. '밴된 유저 ID'을(를) 다시 입력해주세요. 혹은 이미 언밴된 유저일수도 있습니다.",
                              inline=False)
-        errorembed.set_footer(text="BY - Kill00#00800")
+        errorembed.set_footer(text="BY - Kill00#1100")
         await ctx.send(embed=errorembed)
         print(error)
         await client.on_command_error(ctx, error)
@@ -214,7 +214,7 @@ async def hackban(ctx, member_id, *, reason=None):
                                 color=0xff0000)
     bannedembed.add_field(name="처리자", value=f"{ctx.message.author} {ctx.message.author.mention}", inline=False)
     bannedembed.add_field(name="사유", value=f"{reason}", inline=False)
-    bannedembed.set_footer(text="BY - Kill00#00800")
+    bannedembed.set_footer(text="BY - Kill00#1100")
     await ctx.send(embed=bannedembed)
 
     # 처벌기록에 embed 출력
@@ -228,7 +228,7 @@ async def hackban_error(ctx, error):
         mp = discord.Embed(title="권한 부족 이벤트 발생!", timestamp=datetime.utcnow(), color=0xfc7f03)
         mp.add_field(name="자세한 내용", value=f"당신은 `{mper}` 권한이 없어 해당 명령어 사용이 거부되었습니다. 자세한 내용은 관리자에게 문의해주세요.",
                      inline=True)
-        mp.set_footer(text="BY - Kill00#00800")
+        mp.set_footer(text="BY - Kill00#1100")
         await ctx.send(ctx.message.author.mention, embed=mp)
     else:
         errorembed = discord.Embed(title="밴 에러 발생!", description=f"심각한 에러가 발생하였습니다 #404",
@@ -236,7 +236,7 @@ async def hackban_error(ctx, error):
         errorembed.add_field(name="자세한 내용",
                              value=f"밴 할 유저가 없습니다. '유저 ID'을(를) 다시 입력해주세요. 혹은 이미 밴된 유저일수도 있습니다.",
                              inline=False)
-        errorembed.set_footer(text="BY - Kill00#00800")
+        errorembed.set_footer(text="BY - Kill00#1100")
         await ctx.send(embed=errorembed)
         print(error)
         await client.on_command_error(ctx, error)
@@ -264,7 +264,7 @@ async def kick(ctx, member: discord.Member = None, *, reason=None):
                                 color=0xff0000)
     kickedembed.add_field(name="처리자", value=f"{ctx.message.author} {ctx.message.author.mention}", inline=False)
     kickedembed.add_field(name="사유", value=f"{reason}", inline=False)
-    kickedembed.set_footer(text="BY - Kill00#00800")
+    kickedembed.set_footer(text="BY - Kill00#1100")
     await ctx.send(embed=kickedembed)
 
     # 처벌기록에 embed 출력
@@ -275,7 +275,7 @@ async def kick(ctx, member: discord.Member = None, *, reason=None):
                                  color=0xff0000)
     kickusersend.add_field(name="처리자", value=f"{ctx.message.author} {ctx.message.author.mention}", inline=False)
     kickusersend.add_field(name="사유", value=f"{reason}", inline=False)
-    kickusersend.set_footer(text="BY - Kill00#00800")
+    kickusersend.set_footer(text="BY - Kill00#1100")
     await member.send(embed=kickusersend)
 
 
@@ -286,7 +286,7 @@ async def kick_error(ctx, error):
         mp = discord.Embed(title="권한 부족 이벤트 발생!", timestamp=datetime.utcnow(), color=0xfc7f03)
         mp.add_field(name="자세한 내용", value=f"당신은 `{mper}` 권한이 없어 해당 명령어 사용이 거부되었습니다. 자세한 내용은 관리자에게 문의해주세요.",
                      inline=True)
-        mp.set_footer(text="BY - Kill00#00800")
+        mp.set_footer(text="BY - Kill00#1100")
         await ctx.send(ctx.message.author.mention, embed=mp)
     else:
         if isinstance(error, CommandInvokeError):
@@ -297,7 +297,7 @@ async def kick_error(ctx, error):
             errorembed.add_field(name="자세한 내용",
                                  value=f"추방 할 유저가 없습니다. '서버에 참가한 유저중 멘션/ID'을(를) 다시 입력해주세요."
                                        f" 혹은 이미 추방 당했거나 밴된 유저일수도 있습니다.", inline=False)
-            errorembed.set_footer(text="BY - Kill00#00800")
+            errorembed.set_footer(text="BY - Kill00#1100")
             await ctx.send(embed=errorembed)
             print(error)
             await client.on_command_error(ctx, error)
@@ -315,7 +315,7 @@ async def leave(ctx, *, reason=None):
     mp = discord.Embed(title="권한 부족 이벤트 발생!", color=0xfc7f03)
     mp.add_field(name="자세한 내용", value=f"당신은 `{ownerid}` 권한이 없어 해당 명령어 사용이 거부되었습니다. 자세한 내용은 관리자에게 문의해주세요.",
                  inline=True)
-    mp.set_footer(text="BY - Kill00#00800")
+    mp.set_footer(text="BY - Kill00#1100")
     if ctx.message.author.id != ownerid:
         await ctx.send(embed=mp)
     else:
@@ -324,7 +324,7 @@ async def leave(ctx, *, reason=None):
                                    color=0xff0000)
         leaveembed.add_field(name="처리자", value=f"{ctx.message.author} {ctx.message.author.mention}", inline=False)
         leaveembed.add_field(name="사유", value=f"{reason}", inline=False)
-        leaveembed.set_footer(text="BY - Kill00#00800")
+        leaveembed.set_footer(text="BY - Kill00#1100")
         await ctx.send(embed=leaveembed)
         await ctx.guild.leave()
 
@@ -344,7 +344,7 @@ async def shutdown(ctx):
     mp = discord.Embed(title="권한 부족 이벤트 발생!", color=0xfc7f03)
     mp.add_field(name="자세한 내용", value=f"당신은 `{ownerid}` 권한이 없어 해당 명령어 사용이 거부되었습니다. 자세한 내용은 관리자에게 문의해주세요.",
                  inline=True)
-    mp.set_footer(text="BY - Kill00#00800")
+    mp.set_footer(text="BY - Kill00#1100")
     if ctx.message.author.id != ownerid:
         await ctx.send(embed=mp)
     else:
@@ -363,7 +363,7 @@ async def shutdown(ctx):
                                                      f"\n:table_tennis: 퐁!"
                                                      f"\n{client.latency}ms, _Null_ms, {int(ping)}ms, "
                                                      f"{round(client.latency, 1)}ms**")
-        shutdownembed.set_footer(text="BY - Kill00#00800")
+        shutdownembed.set_footer(text="BY - Kill00#1100")
         await sd.edit(content="", embed=shutdownembed)
         await client.logout()
 
@@ -394,7 +394,7 @@ async def cc_error(ctx, error):
         mp = discord.Embed(title="권한 부족 이벤트 발생!", timestamp=datetime.utcnow(), color=0xfc7f03)
         mp.add_field(name="자세한 내용", value=f"당신은 `{mper}` 권한이 없어 해당 명령어 사용이 거부되었습니다. 자세한 내용은 관리자에게 문의해주세요.",
                      inline=True)
-        mp.set_footer(text="BY - Kill00#00800")
+        mp.set_footer(text="BY - Kill00#1100")
         await ctx.send(ctx.message.author.mention, embed=mp)
     else:
         print(error)
@@ -419,7 +419,7 @@ async def 공지(ctx, *args):
     localaceb = discord.Embed(timestamp=datetime.utcnow(), color=0x00ff00)
     localaceb.set_author(name="공지사항", icon_url=ctx.guild.icon_url)
     localaceb.add_field(name="공지 내용", value=f"{' '.join(args)}")
-    localaceb.set_footer(text=f"작성자 : {ctx.message.author}" + f" [BY - Kill00#00800, {botname}]",
+    localaceb.set_footer(text=f"작성자 : {ctx.message.author}" + f" [BY - Kill00#1100, {botname}]",
                          icon_url=ctx.message.author.avatar_url)
     await ctx.message.delete()
     await channel.send(content="@everyone", embed=localaceb)
@@ -432,7 +432,7 @@ async def 공지_error(ctx, error):
         mp = discord.Embed(title="권한 부족 이벤트 발생!", timestamp=datetime.utcnow(), color=0xfc7f03)
         mp.add_field(name="자세한 내용", value=f"당신은 `{mper}` 권한이 없어 해당 명령어 사용이 거부되었습니다. 자세한 내용은 관리자에게 문의해주세요.",
                      inline=True)
-        mp.set_footer(text="BY - Kill00#00800")
+        mp.set_footer(text="BY - Kill00#1100")
         await ctx.send(ctx.message.author.mention, embed=mp)
     else:
         print(error)
@@ -447,7 +447,7 @@ async def getinvite(ctx, args):
     mp = discord.Embed(title="권한 부족 이벤트 발생!", color=0xfc7f03)
     mp.add_field(name="자세한 내용", value=f"당신은 `{ownerid}` 권한이 없어 해당 명령어 사용이 거부되었습니다. 자세한 내용은 관리자에게 문의해주세요.",
                  inline=True)
-    mp.set_footer(text="BY - Kill00#00800")
+    mp.set_footer(text="BY - Kill00#1100")
     if ctx.message.author.id != ownerid:
         await ctx.send(embed=mp)
     else:
@@ -493,7 +493,7 @@ async def on_member_join(member):
                               f"\n서버에 가입한 시간 : "
                               f"`{(member.joined_at + timedelta(hours=9)).strftime('%Y년 %m월 %d일 %A %p %I시 %M분 %S초')}`",
                         inline=False)
-    welcomech.set_footer(text="서버 인원 : " + str(channel.guild.member_count) + f"명 [BY - Kill00#00800, {botname}]")
+    welcomech.set_footer(text="서버 인원 : " + str(channel.guild.member_count) + f"명 [BY - Kill00#1100, {botname}]")
     await channel.send(embed=welcomech)
 
 
@@ -523,7 +523,7 @@ async def on_member_remove(member):
 
                           f"\n서버를 떠난 시각 : `" + datetime.now().strftime("%Y년 %m월 %d일 %A %p %I시 %M분 %S초") + "`",
                     inline=False)
-    byech.set_footer(text="서버 인원 : " + str(channel.guild.member_count) + f"명 [BY - Kill00#00800, {botname}]")
+    byech.set_footer(text="서버 인원 : " + str(channel.guild.member_count) + f"명 [BY - Kill00#1100, {botname}]")
     await channel.send(embed=byech)
 
 
